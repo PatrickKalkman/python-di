@@ -28,16 +28,21 @@ class AppModule(Module):
     @inject
     @singleton
     @provider
-    def provide_unit_of_work(self,
-                             connection: InMemoryConnection,
-                             person_repository: InMemoryPersonRepository,
-                             order_repository: InMemoryOrderRepository) -> UnitOfWork:
+    def provide_unit_of_work(
+        self,
+        connection: InMemoryConnection,
+        person_repository: InMemoryPersonRepository,
+        order_repository: InMemoryOrderRepository
+    ) -> UnitOfWork:
         return UnitOfWork(connection, person_repository, order_repository)
 
     @inject
     @singleton
     @provider
-    def provide_create_use_case(self, unit_of_work: UnitOfWork) -> CreatePersonAndOrderUseCase:
+    def provide_create_use_case(
+        self,
+        unit_of_work: UnitOfWork
+    ) -> CreatePersonAndOrderUseCase:
         return CreatePersonAndOrderUseCase(unit_of_work)
 
 

@@ -1,2 +1,4 @@
+dependency_injector==4.41.0
+injector==0.20.1
 pytest==7.2.2
 SQLAlchemy==2.0.9
