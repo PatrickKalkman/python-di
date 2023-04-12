@@ -1,4 +1,4 @@
-# python-repo-uow
+# python-di
 Python’s increasing popularity has led to the development of larger and more complex projects. This growth has sparked developers’ interest in high-level software design patterns, like those prescribed by domain-driven design (DDD).
 
 Yet, implementing these patterns in Python can be challenging.

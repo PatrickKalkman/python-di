@@ -24,5 +24,4 @@ new_person = Person(id=1, name="John Doe", age=30)
 new_order = Order(id=1, order_date="2023-04-03", total_amount=100.0)
 
 person, order = create_use_case.execute(new_person, new_order)
-print(person)
-print(order)
+print(person, order)
